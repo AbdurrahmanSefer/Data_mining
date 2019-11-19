@@ -1,0 +1,16 @@
+
+            int[] d = new int[100];
+            Random r = new Random();
+            int[] sayac = new int[6];
+            for (int i = 0; i < 100; i++)
+            {
+                d[i] = r.Next(1, 7);
+                sayac[d[i] - 1]++;
+            }         
+            double entropi = 0;
+            for (int i = 0; i < sayac.Length; i++)
+            {
+                entropi +=(-(sayac[i]/100.0) * Math.Log((sayac[i]/100.0), 2));
+            }
+            Console.WriteLine(entropi);
+            Console.Read();   
