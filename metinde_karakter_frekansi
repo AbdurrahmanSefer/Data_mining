@@ -1,0 +1,15 @@
+            string metin = Console.ReadLine();
+            int[] karakter=new int[256];
+            for(int i = 0; i < metin.Length; i++)
+            {
+                int metin_karakteri = Convert.ToInt16(Convert.ToChar(metin[i]));
+                karakter[metin_karakteri]++;
+            }    
+           for(int j=0;j<karakter.Length;j++)
+            {
+                    if(karakter[j]!=0)
+               {
+                        Console.WriteLine(Convert.ToChar(j) + " karakteri " + karakter[j] + "defa geçti");
+               }
+             }        
+            Console.ReadLine();
