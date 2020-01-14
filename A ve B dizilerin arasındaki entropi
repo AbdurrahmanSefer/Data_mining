@@ -1,0 +1,33 @@
+
+
+            double eleman_sayisi = 40;
+            int[] x = new int[(int)eleman_sayisi];
+            int[] y = new int[(int)eleman_sayisi];
+
+            Random r = new Random();
+            int[] x_sayac = new int[6];
+            int[] y_sayac = new int[6];
+
+            for (int i = 0; i < eleman_sayisi; i++)
+            {
+                x[i] = r.Next(1, 7);
+                x_sayac[x[i] - 1]++;
+
+                y[i] = r.Next(1, 7);
+                y_sayac[y[i] - 1]++;
+            }
+
+            double x_entropi = 0;
+            double y_entropi = 0;
+
+            for (int i = 0; i < x_sayac.Length; i++)
+            {
+                x_entropi += (-(x_sayac[i] / eleman_sayisi) * Math.Log((x_sayac[i] / eleman_sayisi),2));
+                y_entropi += (-(y_sayac[i] / eleman_sayisi) * Math.Log((y_sayac[i] / eleman_sayisi), 2));
+
+            }
+            x_entropi = x_entropi / Math.Log(eleman_sayisi , 2);
+            y_entropi = y_entropi / Math.Log(eleman_sayisi , 2);
+
+            Console.WriteLine("X dağılım oranı: "+x_entropi+" Y dağlma oranı: "+y_entropi);
+            Console.Read();
