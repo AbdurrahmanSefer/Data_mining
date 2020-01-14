@@ -29,5 +29,5 @@
             x_entropi = x_entropi / Math.Log(eleman_sayisi , 2);
             y_entropi = y_entropi / Math.Log(eleman_sayisi , 2);
 
-            Console.WriteLine("X dağılım oranı: "+x_entropi+" Y dağlma oranı: "+y_entropi);
+            Console.WriteLine("X'in dağılma oranı: "+x_entropi+" Y'nin dağılma oranı: "+y_entropi);
             Console.Read();
